@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <rect width="128" height="128" fill="#f3f0e9"/>
+  <g stroke="#24221e" stroke-width="7">
+    <!-- L -->
+    <line x1="26" y1="28" x2="26" y2="100"/>
+    <line x1="26" y1="94" x2="62" y2="94"/>
+    <!-- I -->
+    <line x1="86" y1="28" x2="86" y2="100"/>
+    <line x1="70" y1="28" x2="102" y2="28"/>
+  </g>
+  <!-- accentuate champance -->
+  <line x1="70" y1="100" x2="102" y2="100" stroke="#a58b5a" stroke-width="7.5"/>
+</svg>
