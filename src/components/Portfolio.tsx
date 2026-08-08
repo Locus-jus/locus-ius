@@ -1,41 +1,42 @@
 import { ArrowUpRight } from "lucide-react";
 import { waLink } from "../config";
 import { Reveal } from "./ui";
+import { AndradeLimaMock, MartinsMock, RochaMock, VasconcelosMock } from "./mocks";
 
-const PROJECTS = [
+const STUDIES = [
   {
     n: "01",
     name: "Andrade & Lima",
     area: "Direito empresarial",
-    img: `${import.meta.env.BASE_URL}projects/andrade.jpg`,
-    tone: "Escuro, corporativo e preciso.",
-    desc: "Uma interface sóbria com leitura rápida, foco em autoridade e hierarquia clara para um escritório boutique.",
+    tone: "Mais escuro, direto e corporativo.",
+    desc: "Print de site-modelo com foco em autoridade, contraste e leitura rápida.",
+    render: AndradeLimaMock,
   },
   {
     n: "02",
     name: "Martins Advocacia",
     area: "Direito de família",
-    img: `${import.meta.env.BASE_URL}projects/martins.jpg`,
-    tone: "Mais humana, aberta e acolhedora.",
-    desc: "Tons suaves, espaçamento generoso e uma composição que transmite cuidado sem perder objetividade.",
+    tone: "Mais humano e acolhedor.",
+    desc: "Print de site-modelo com composição suave, texto central e ritmo calmo.",
+    render: MartinsMock,
   },
   {
     n: "03",
     name: "Vasconcelos Jurídico",
     area: "Direito imobiliário",
-    img: `${import.meta.env.BASE_URL}projects/vasconcelos.jpg`,
-    tone: "Arquitetônica e institucional.",
-    desc: "Grid preciso, contraste controlado e uma composição pensada para parecer sólida em telas grandes e pequenas.",
+    tone: "Arquitetônico e institucional.",
+    desc: "Print de site-modelo pensado para parecer preciso, sólido e bem organizado.",
+    render: VasconcelosMock,
   },
   {
     n: "04",
     name: "Rocha Previdenciário",
     area: "Direito previdenciário",
-    img: `${import.meta.env.BASE_URL}projects/rocha.jpg`,
-    tone: "Clara, simples e confiável.",
-    desc: "Textos diretos e chamadas visíveis para reduzir atrito e deixar o próximo passo claro já na primeira visita.",
+    tone: "Claro, simples e confiável.",
+    desc: "Print de site-modelo com linguagem acessível, CTA visível e baixa fricção.",
+    render: RochaMock,
   },
-];
+] as const;
 
 export function Portfolio() {
   return (
@@ -45,86 +46,82 @@ export function Portfolio() {
           <div className="flex items-center justify-between border-b border-line pb-3.5">
             <p className="eyebrow">
               <span aria-hidden="true" className="h-px w-10 bg-champagne"></span>
-              Estudos
+              Modelos conceituais
             </p>
-            <span className="micro-label">Série 01 · conceitos</span>
+            <span className="micro-label">Prints de site-modelo</span>
           </div>
         </Reveal>
 
         <Reveal delay={80}>
           <div className="mt-10 max-w-4xl">
             <h2 className="font-display-xl text-[clamp(2.7rem,5.8vw,5.4rem)] leading-[0.96] tracking-[-0.05em] text-charcoal">
-              Quatro direções visuais, uma linguagem moderna de trabalho.
+              Estudos apresentados como prints de sites-modelo.
             </h2>
             <p className="mt-6 max-w-2xl text-[15px] leading-relaxed text-stone md:text-base">
-              Cada estudo mostra um caminho diferente para o mesmo objetivo: parecer atual, confiável e fácil de usar.
-              Sem blocos soltos, sem sobreposições instáveis, sem composição que briga com a leitura.
+              Aqui o objetivo é deixar claro que cada peça é um conceito. Não são páginas finais nem imagens soltas: são
+              simulações de abertura de um site, com barra de navegador, rótulo de modelo e identidade própria.
             </p>
           </div>
         </Reveal>
 
-        <ol className="mt-16 grid gap-6 md:grid-cols-2 lg:gap-8">
-          {PROJECTS.map((project) => (
-            <li key={project.n}>
-              <Reveal>
-                <article className="group overflow-hidden rounded-[2rem] border border-line bg-cream shadow-[0_20px_60px_rgb(15_23_42/0.05)] transition-transform duration-300 hover:-translate-y-1">
-                  <div className="relative aspect-[16/11] overflow-hidden border-b border-line bg-sand">
-                    <img
-                      src={project.img}
-                      alt={project.name}
-                      loading="lazy"
-                      decoding="async"
-                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-brown/25 via-transparent to-transparent"></div>
-                    <div className="absolute left-5 top-5 rounded-full border border-white/50 bg-white/80 px-3 py-1 text-[9px] font-semibold uppercase tracking-[0.28em] text-charcoal backdrop-blur-sm">
-                      {project.n}
-                    </div>
-                    <div className="absolute bottom-5 left-5 rounded-full bg-brown/85 px-3 py-1 text-[9px] font-semibold uppercase tracking-[0.24em] text-ivory backdrop-blur-sm">
-                      {project.area}
-                    </div>
-                  </div>
+        <ol className="mt-16 grid gap-8 lg:grid-cols-2">
+          {STUDIES.map((study) => {
+            const Mock = study.render;
 
-                  <div className="space-y-5 p-6 md:p-7">
-                    <div className="flex items-start justify-between gap-4">
+            return (
+              <li key={study.n}>
+                <Reveal>
+                  <article className="rounded-[2rem] border border-line bg-cream p-4 shadow-[0_20px_60px_rgb(15_23_42/0.05)]">
+                    <div className="flex items-center justify-between px-1 pb-4">
                       <div>
-                        <p className="micro-label">{project.area}</p>
-                        <h3 className="font-display mt-3 text-[clamp(1.9rem,3vw,2.6rem)] leading-[0.98] tracking-[-0.045em] text-charcoal">
-                          {project.name}
+                        <p className="micro-label text-champagne">{study.area}</p>
+                        <h3 className="mt-2 font-display text-[clamp(1.8rem,2.8vw,2.4rem)] leading-[0.98] tracking-[-0.04em] text-charcoal">
+                          {study.name}
                         </h3>
                       </div>
-                      <span className="rounded-full border border-line px-3 py-1 text-[9px] font-semibold uppercase tracking-[0.26em] text-taupe">
-                        Projeto 0{project.n}
+                      <span className="rounded-full border border-line bg-ivory px-3 py-1 text-[9px] font-semibold uppercase tracking-[0.26em] text-taupe">
+                        Modelo conceitual
                       </span>
                     </div>
 
-                    <p className="text-[14.5px] leading-relaxed text-stone">{project.desc}</p>
+                    <div className="rounded-[1.5rem] border border-line bg-ivory p-3">
+                      <div className="overflow-hidden rounded-[1.1rem]">
+                        <Mock />
+                      </div>
+                    </div>
 
-                    <div className="flex flex-wrap items-center justify-between gap-4 border-t border-line pt-4">
-                      <p className="max-w-xs text-[11px] font-medium uppercase leading-relaxed tracking-[0.22em] text-taupe">
-                        {project.tone}
-                      </p>
+                    <div className="space-y-4 px-1 pt-5">
+                      <div className="flex flex-wrap items-center justify-between gap-4">
+                        <p className="max-w-xs text-[11px] font-medium uppercase leading-relaxed tracking-[0.22em] text-taupe">
+                          {study.tone}
+                        </p>
+                        <span className="text-[10px] font-semibold uppercase tracking-[0.26em] text-champagne">
+                          Print 0{study.n}
+                        </span>
+                      </div>
+                      <p className="text-[14.5px] leading-relaxed text-stone">{study.desc}</p>
                       <a
-                        href={waLink(`Olá, quero conversar sobre um projeto parecido com ${project.name}.`)}
+                        href={waLink(`Olá, quero conversar sobre um site-modelo parecido com ${study.name}.`)}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.26em] text-champagne transition-colors duration-300 hover:text-charcoal"
                       >
-                        Ver direção
+                        Quero este caminho
                         <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                       </a>
                     </div>
-                  </div>
-                </article>
-              </Reveal>
-            </li>
-          ))}
+                  </article>
+                </Reveal>
+              </li>
+            );
+          })}
         </ol>
 
         <Reveal delay={120}>
           <div className="mt-10 border-t border-line pt-8">
             <p className="max-w-3xl text-[13px] leading-relaxed text-stone">
-              Os projetos acima são conceituais e fictícios, criados para demonstrar direção visual, composição e tom.
+              Todos os modelos são conceituais e fictícios. A intenção é demonstrar direção visual, não representar
+              clientes reais.
             </p>
           </div>
         </Reveal>
