@@ -15,6 +15,12 @@ export function Hero() {
 
   return (
     <section id="topo" className="relative overflow-hidden border-b border-line bg-ivory">
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: `url(${HERO_IMG})` }}
+        aria-hidden="true"
+      ></div>
+      <div className="absolute inset-0 bg-ivory/60"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(37,99,235,0.08),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(96,165,250,0.05),transparent_24%)]"></div>
 
       <div className="container-site relative pt-28 md:pt-32 lg:pt-36">
