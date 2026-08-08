@@ -8,13 +8,11 @@ import {
   RochaMock,
 } from "./mocks";
 
-const R20 = "?auto=format&fit=crop&w=2000&q=80";
-
 const IMG = {
-  andrade: `https://images.unsplash.com/photo-1507842217343-583bb7270b66${R20}`,
-  martins: `https://images.unsplash.com/photo-1524758631624-e2822e304c36${R20}`,
-  vasconcelos: `https://images.unsplash.com/photo-1518005020951-eccb494ad742${R20}`,
-  rocha: `https://images.unsplash.com/photo-1504384308090-c894fdcc538d${R20}`,
+  andrade: `${import.meta.env.BASE_URL}projects/andrade.jpg`,
+  martins: `${import.meta.env.BASE_URL}projects/martins.jpg`,
+  vasconcelos: `${import.meta.env.BASE_URL}projects/vasconcelos.jpg`,
+  rocha: `${import.meta.env.BASE_URL}projects/rocha.jpg`,
 };
 
 function MiniTag({ children }: { children: string }) {

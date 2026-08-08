@@ -1,13 +1,13 @@
-import { ArrowUpRight, MoveDown } from "lucide-react";
+﻿import { ArrowUpRight, MoveDown } from "lucide-react";
 import { waLink } from "../config";
 import { Reveal, useParallax } from "./ui";
 import { HeroMockup } from "./mocks";
 
-const HERO_IMG = "/hero-arch.jpg";
+const HERO_IMG = `${import.meta.env.BASE_URL}hero-arch.jpg`;
 
 const META = [
-  { n: "01", t: "Sites institucionais", v: "Estrutura, texto e direção de arte" },
-  { n: "02", t: "Design + desenvolvimento", v: "Do esboço ao ar, por uma pessoa" },
+  { n: "01", t: "Sites institucionais", v: "Estrutura, texto e direÃ§Ã£o de arte" },
+  { n: "02", t: "Design + desenvolvimento", v: "Do esboÃ§o ao ar, por uma pessoa" },
   { n: "03", t: "O contato", v: "WhatsApp direto, sem burocracia" },
 ];
 
@@ -16,7 +16,7 @@ export function Hero() {
 
   return (
     <section id="topo" className="paper-grain relative overflow-hidden bg-ivory">
-      {/* Número fantasma de fundo */}
+      {/* NÃºmero fantasma de fundo */}
       <span
         aria-hidden="true"
         className="pointer-events-none absolute -right-8 top-28 hidden select-none font-display text-[20rem] italic leading-none text-charcoal/[0.05] lg:block"
@@ -28,13 +28,13 @@ export function Hero() {
         {/* Micro linha de topo */}
         <Reveal>
           <div className="flex items-center justify-between border-b border-line pb-3.5">
-            <span className="micro-label">Estúdio independente</span>
-            <span className="micro-label hidden sm:block">Edição 001</span>
+            <span className="micro-label">EstÃºdio independente</span>
+            <span className="micro-label hidden sm:block">EdiÃ§Ã£o 001</span>
             <span className="micro-label">Web para advocacia</span>
           </div>
         </Reveal>
 
-        {/* Epígrafe — palavra de abertura */}
+        {/* EpÃ­grafe â€” palavra de abertura */}
         <Reveal delay={40}>
           <p className="mt-8 font-display italic text-[clamp(1.5rem,3.4vw,3rem)] leading-tight tracking-[-0.01em] text-stone md:mt-10">
             Locus, ius
@@ -42,19 +42,19 @@ export function Hero() {
         </Reveal>
 
         <div className="grid grid-cols-1 gap-14 pt-10 lg:grid-cols-12 lg:gap-8 lg:pt-14">
-          {/* ————— Contracapa ————— */}
+          {/* â€”â€”â€”â€”â€” Contracapa â€”â€”â€”â€”â€” */}
           <div className="relative flex flex-col justify-center lg:col-span-7">
             <Reveal>
               <p className="eyebrow">
                 <span aria-hidden="true" className="h-px w-10 bg-champagne"></span>
-                Uma presença digital
+                Uma presenÃ§a digital
               </p>
             </Reveal>
             <Reveal delay={90}>
               <h1 className="font-display-xl mt-8 text-[clamp(3.1rem,8.2vw,7.6rem)] leading-[0.9] tracking-[-0.03em] text-charcoal">
-                <span className="block text-champagne">À altura</span>
+                <span className="block text-champagne">Ã€ altura</span>
                 <span className="block">do seu</span>
-                <span className="block">escritório.</span>
+                <span className="block">escritÃ³rio.</span>
               </h1>
             </Reveal>
             <Reveal delay={190}>
@@ -62,15 +62,15 @@ export function Hero() {
             </Reveal>
             <Reveal delay={230}>
               <p className="mt-7 max-w-md text-[15px] leading-relaxed text-stone md:text-base">
-                A identidade digital de um escritório de advocacia é o seu lugar — Locus, Ius é o estúdio
-                que trata esse espaço com a precisão de um escritório jurídico: arquitetura, rigor e cultivo
+                A identidade digital de um escritÃ³rio de advocacia Ã© o seu lugar â€” Locus, Ius Ã© o estÃºdio
+                que trata esse espaÃ§o com a precisÃ£o de um escritÃ³rio jurÃ­dico: arquitetura, rigor e cultivo
                 editorial.
               </p>
             </Reveal>
             <Reveal delay={300}>
               <div className="mt-10 flex flex-wrap items-center gap-x-12 gap-y-6">
                 <a
-                  href={waLink("Olá, quero criar um site para o meu escritório de advocacia.")}
+                  href={waLink("OlÃ¡, quero criar um site para o meu escritÃ³rio de advocacia.")}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group inline-flex items-center gap-3 bg-brown px-7 py-4 text-[11px] font-semibold uppercase tracking-[0.26em] text-ivory transition-colors duration-300 hover:bg-charcoal"
@@ -98,13 +98,13 @@ export function Hero() {
             </Reveal>
           </div>
 
-          {/* ————— Capa ————— */}
+          {/* â€”â€”â€”â€”â€” Capa â€”â€”â€”â€”â€” */}
           <div className="relative lg:col-span-5 lg:pl-6">
             <Reveal delay={180} className="relative">
               <div ref={mediaRef} className="media relative aspect-[4/5] w-full overflow-hidden border border-line">
                 <img
                   src={HERO_IMG}
-                  alt="Fotografia arquitetônica em tons claros de um escritório contemporâneo"
+                  alt="Fotografia arquitetÃ´nica em tons claros de um escritÃ³rio contemporÃ¢neo"
                   loading="eager"
                   decoding="async"
                   className="h-full w-full object-cover"
@@ -112,10 +112,10 @@ export function Hero() {
                 <span aria-hidden="true" className="absolute left-3 top-3 h-12 w-12 border-l border-t border-charcoal/40"></span>
                 <span aria-hidden="true" className="absolute bottom-3 right-3 h-12 w-12 border-b border-r border-charcoal/40"></span>
                 <p className="absolute left-5 top-5 text-[9px] font-semibold uppercase tracking-[0.3em] text-stone">
-                  Fig. 01 — Arquitetura
+                  Fig. 01 â€” Arquitetura
                 </p>
                 <p className="absolute bottom-5 left-5 text-[9px] font-medium uppercase tracking-[0.28em] text-stone/70">
-                  Locus, Ius · loc. est.
+                  Locus, Ius Â· loc. est.
                 </p>
               </div>
 
@@ -124,14 +124,14 @@ export function Hero() {
                 <HeroMockup />
                 <div className="mt-3 flex items-center justify-between px-1 text-[9px] font-semibold uppercase tracking-[0.26em] text-taupe">
                   <span>Conceito</span>
-                  <span className="text-champagne">01 — A&amp;L</span>
+                  <span className="text-champagne">01 â€” A&amp;L</span>
                 </div>
               </div>
             </Reveal>
           </div>
         </div>
 
-        {/* Rodapé do hero — dados da edição */}
+        {/* RodapÃ© do hero â€” dados da ediÃ§Ã£o */}
         <Reveal delay={160}>
           <div className="mt-24 grid grid-cols-1 border-t border-line pb-20 sm:grid-cols-3 md:mt-28 lg:mt-16">
             {META.map((c, i) => (
@@ -158,7 +158,7 @@ export function Hero() {
   );
 }
 
-/* ============ PRINCÍPIO — monumental ============ */
+/* ============ PRINCÃPIO â€” monumental ============ */
 export function Concept() {
   const stripRef = useParallax(24);
 
@@ -169,9 +169,9 @@ export function Concept() {
           <div className="flex items-center justify-between border-b border-line pb-3.5">
             <p className="eyebrow">
               <span aria-hidden="true" className="h-px w-10 bg-champagne"></span>
-              Princípio
+              PrincÃ­pio
             </p>
-            <span className="micro-label">N.º 001</span>
+            <span className="micro-label">N.Âº 001</span>
           </div>
         </Reveal>
 
@@ -179,10 +179,10 @@ export function Concept() {
           <Reveal delay={90}>
             <h2 className="font-display-xl capitalize text-[clamp(3rem,8.2vw,7.8rem)] uppercase leading-[0.94] tracking-[-0.03em] text-charcoal">
               <span className="block">Seu site</span>
-              <span className="block">é parte da</span>
+              <span className="block">Ã© parte da</span>
               <span className="relative z-10 block text-champagne">imagem</span>
               <span className="block">do seu</span>
-              <span className="block">escritório.</span>
+              <span className="block">escritÃ³rio.</span>
             </h2>
           </Reveal>
 
@@ -190,21 +190,21 @@ export function Concept() {
             <div className="mt-14 h-px w-full max-w-md bg-gradient-to-r from-line to-transparent"></div>
             <div className="mt-7 grid max-w-2xl gap-8 md:grid-cols-2">
               <p className="text-[14.5px] leading-relaxed text-stone">
-                Um site não substitui a reputação de um advogado — pode reforçá-la, ou enfraquecê-la.
+                Um site nÃ£o substitui a reputaÃ§Ã£o de um advogado â€” pode reforÃ§Ã¡-la, ou enfraquecÃª-la.
               </p>
               <p className="font-display-soft text-[18px] italic leading-relaxed text-charcoal/85">
-                Antes de entrar em contato, quase sempre alguém já passou pelo seu site.
+                Antes de entrar em contato, quase sempre alguÃ©m jÃ¡ passou pelo seu site.
               </p>
             </div>
           </Reveal>
 
-          {/* Fita de arquitetura — desktop, à direita da composição */}
+          {/* Fita de arquitetura â€” desktop, Ã  direita da composiÃ§Ã£o */}
           <Reveal delay={140} className="absolute right-0 top-0 hidden h-full w-[230px] lg:block">
             <div ref={stripRef} className="pointer-events-none h-full">
               <div className="relative h-full overflow-hidden border border-line">
                 <img
-                  src="/hero-arch.jpg"
-                  alt="Detalhe arquitetônico em tons claros"
+                  src={`${import.meta.env.BASE_URL}hero-arch.jpg`}
+                  alt="Detalhe arquitetÃ´nico em tons claros"
                   loading="lazy"
                   decoding="async"
                   className="h-full w-full object-cover brightness-[0.96]"
@@ -212,26 +212,26 @@ export function Concept() {
                 <span aria-hidden="true" className="absolute inset-0 bg-ivory/10"></span>
                 <span aria-hidden="true" className="absolute left-3 top-3 h-8 w-8 border-l border-t border-charcoal/30"></span>
                 <p className="absolute bottom-4 left-4 right-4 text-[9px] font-semibold uppercase leading-relaxed tracking-[0.26em] text-stone">
-                  Fig. 02 — Textura
+                  Fig. 02 â€” Textura
                 </p>
               </div>
             </div>
           </Reveal>
         </div>
 
-        {/* Fita fotográfica — mobile */}
+        {/* Fita fotogrÃ¡fica â€” mobile */}
         <Reveal delay={140} className="mt-12 lg:hidden">
           <div className="relative h-[40vh] overflow-hidden border border-line">
             <img
-              src="/hero-arch.jpg"
-              alt="Detalhe arquitetônico em tons claros"
+              src={`${import.meta.env.BASE_URL}hero-arch.jpg`}
+              alt="Detalhe arquitetÃ´nico em tons claros"
               loading="lazy"
               decoding="async"
               className="h-full w-full object-cover brightness-[0.96]"
             />
             <span aria-hidden="true" className="absolute left-3 top-3 h-8 w-8 border-l border-t border-charcoal/30"></span>
             <p className="absolute bottom-4 left-4 text-[9px] font-semibold uppercase tracking-[0.26em] text-stone">
-              Fig. 02 — Textura
+              Fig. 02 â€” Textura
             </p>
           </div>
         </Reveal>
