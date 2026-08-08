@@ -120,7 +120,7 @@ export function Hero() {
               </div>
 
               {/* Mockup escuro sobreposto na base da fotografia */}
-              <div className="relative z-10 mx-auto -mt-20 w-[88%] max-w-[380px] lg:absolute lg:bottom-[-3rem] lg:left-0 lg:mx-0 lg:mt-0 lg:w-[68%]">
+              <div className="relative z-10 mx-auto hidden w-[88%] max-w-[380px] lg:absolute lg:bottom-[-3rem] lg:left-0 lg:mx-0 lg:-mt-20 lg:block lg:w-[68%]">
                 <HeroMockup />
                 <div className="mt-3 flex items-center justify-between px-1 text-[9px] font-semibold uppercase tracking-[0.26em] text-taupe">
                   <span>Conceito</span>
