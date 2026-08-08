@@ -1,4 +1,5 @@
 ﻿import type { ReactNode } from "react";
+import { BrandLogo } from "./ui";
 
 const ACCENT = "#a58b5a";
 
@@ -34,9 +35,7 @@ export function HeroMockup() {
     >
       <div className="flex h-full flex-1 flex-col justify-between bg-[#1f1c18] p-7">
         <div className="flex items-center justify-between">
-          <span className="font-display text-[20px] italic leading-none tracking-tight text-[#e9e4d6]">
-            Andrade <span style={{ color: ACCENT }}>&amp;</span> Lima
-          </span>
+          <BrandLogo tone="dark" className="scale-[0.72] origin-left" />
           <nav className="flex items-center gap-5 text-[9px] font-medium uppercase tracking-[0.22em] text-[#e9e4d6]/40" aria-hidden="true">
             <span>Sobre</span>
             <span>Áreas</span>
@@ -85,9 +84,7 @@ export function AndradeLimaMock() {
     <MockShell url="andradelima.com.br" className="min-h-[340px] sm:min-h-[420px]">
       <div className="flex h-full flex-1 flex-col rounded-b-sm bg-[#efe9da]">
         <div className="flex items-center justify-between border-b border-black/10 px-6 py-4">
-          <span className="font-display text-[20px] italic">
-            Andrade <span className="text-[#a58b5a]">&amp;</span> Lima
-          </span>
+          <BrandLogo className="scale-[0.72] origin-left" />
           <span className="small-caps flex gap-5 text-[10px] text-black/55">
             <span>Sobre</span>
             <span>Áreas</span>
@@ -123,7 +120,7 @@ export function MartinsMock() {
     <MockShell url="martinsadvocacia.com.br" className="min-h-[340px] sm:min-h-[420px]">
       <div className="flex h-full flex-1 flex-col rounded-b-sm bg-[#f1ece1]">
         <div className="flex items-center justify-between px-6 py-4">
-          <span className="font-display text-[19px] italic text-[#3a2e26]">Martins Advogado</span>
+          <BrandLogo className="scale-[0.68] origin-left" />
           <span className="small-caps flex gap-5 text-[10px] text-[#3a2e26]/55">
             <span>Início</span>
             <span>Áreas</span>
@@ -159,9 +156,7 @@ export function VasconcelosMock() {
     <MockShell url="vasconcelosjuridico.com.br" className="min-h-[340px] sm:min-h-[420px]">
       <div className="flex h-full flex-1 flex-col rounded-b-sm bg-[#ece9e0]">
         <div className="flex items-center justify-between px-6 py-4">
-          <span className="small-caps text-[11px] font-semibold tracking-[0.28em] text-[#26282d]">
-            Vasconcelos Jurídico
-          </span>
+          <BrandLogo className="scale-[0.68] origin-left" />
           <span className="small-caps flex gap-5 text-[10px] text-black/50">
             <span>Operações</span>
             <span>Mapeamento</span>
@@ -228,7 +223,7 @@ export function RochaMock() {
     <MockShell url="rochaprevidenciario.com.br" className="min-h-[340px] sm:min-h-[420px]">
       <div className="flex h-full flex-1 flex-col rounded-b-sm bg-[#eef0eb]">
         <div className="flex items-center justify-between border-b border-black/10 px-6 py-4">
-          <span className="font-display text-[20px] italic text-[#18332c]">Rocha Previdenciário</span>
+          <BrandLogo className="scale-[0.68] origin-left" />
           <span className="rounded-full bg-[#1e7a70] px-4 py-1.5 text-[9px] font-bold uppercase tracking-[0.22em] text-white">
             Atendimento
           </span>

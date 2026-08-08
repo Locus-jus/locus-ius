@@ -40,18 +40,21 @@ export function BrandLogo({
   const text = tone === "dark" ? "text-ivory" : "text-charcoal";
   const sub = tone === "dark" ? "text-ivory/55" : "text-taupe";
   const accent = "#c3a86e";
-  const border = tone === "dark" ? "border-ivory/15" : "border-line";
 
   return (
     <span className={"inline-flex items-center gap-3 " + className}>
-      <span className={"relative grid h-12 w-12 place-items-center rounded-full border " + border}>
-        <span className={"font-display text-[25px] leading-none tracking-[-0.08em] " + text}>LI</span>
-        <span aria-hidden="true" className="absolute left-1/2 top-2 h-[1px] w-6 -translate-x-1/2 bg-current opacity-10"></span>
-        <span aria-hidden="true" className="absolute bottom-1.5 left-1/2 h-2.5 w-2.5 -translate-x-1/2 rotate-45" style={{ background: accent }}></span>
+      <span className="relative h-12 w-10 shrink-0">
+        <span className={"absolute left-[1px] top-[-2px] font-serif text-[40px] leading-none " + text}>L</span>
+        <span className={"absolute right-0 top-[7px] font-serif text-[33px] leading-none " + text}>I</span>
+        <span
+          aria-hidden="true"
+          className="absolute bottom-1.5 left-[15px] h-2.5 w-2.5 rotate-45"
+          style={{ background: accent }}
+        ></span>
       </span>
 
       <span className="inline-flex flex-col">
-        <span className={"font-serif italic text-[22px] leading-none tracking-[-0.02em] " + text}>
+        <span className={"font-serif italic text-[22px] leading-none tracking-[-0.04em] " + text}>
           locus<span style={{ color: accent }}>,</span> <span style={{ color: tone === "dark" ? "#d7be86" : accent }}>ius</span>
         </span>
         <span className={"mt-1 text-[8.5px] font-semibold uppercase tracking-[0.34em] " + sub}>
