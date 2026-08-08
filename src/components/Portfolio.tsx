@@ -1,23 +1,23 @@
 import { ArrowUpRight } from "lucide-react";
 import { waLink } from "../config";
 import { Reveal } from "./ui";
-import { AndradeLimaMock, MartinsMock, RochaMock, VasconcelosMock } from "./mocks";
+import { AndradeMock, MartinsMock, RochaMock, VasconcelosMock } from "./mocks";
 
 const STUDIES = [
   {
     n: "01",
-    name: "Andrade & Lima",
+    name: "Andrade & Mendonça",
     area: "Direito empresarial",
     tone: "Mais escuro, direto e corporativo.",
-    desc: "Print de site-modelo com foco em autoridade, contraste e leitura rápida.",
-    render: AndradeLimaMock,
+    desc: "Site-modelo com foco em autoridade, contraste e leitura rápida, pensado para escritórios de negócios.",
+    render: AndradeMock,
   },
   {
     n: "02",
     name: "Martins Advocacia",
     area: "Direito de família",
     tone: "Mais humano e acolhedor.",
-    desc: "Print de site-modelo com composição suave, texto central e ritmo calmo.",
+    desc: "Site-modelo com composição suave, texto central e tom de cuidado para a área de família.",
     render: MartinsMock,
   },
   {
@@ -25,7 +25,7 @@ const STUDIES = [
     name: "Vasconcelos Jurídico",
     area: "Direito imobiliário",
     tone: "Arquitetônico e institucional.",
-    desc: "Print de site-modelo pensado para parecer preciso, sólido e bem organizado.",
+    desc: "Site-modelo escuro e preciso, feito para transmitir estrutura e organização jurídica imobiliária.",
     render: VasconcelosMock,
   },
   {
@@ -33,7 +33,7 @@ const STUDIES = [
     name: "Rocha Previdenciário",
     area: "Direito previdenciário",
     tone: "Claro, simples e confiável.",
-    desc: "Print de site-modelo com linguagem acessível, CTA visível e baixa fricção.",
+    desc: "Site-modelo com linguagem acessível, CTA visível e baixa fricção para direitos previdenciários.",
     render: RochaMock,
   },
 ] as const;
@@ -58,13 +58,14 @@ export function Portfolio() {
               Estudos apresentados como prints de sites-modelo.
             </h2>
             <p className="mt-6 max-w-2xl text-[15px] leading-relaxed text-stone md:text-base">
-              Aqui o objetivo é deixar claro que cada peça é um conceito. Não são páginas finais nem imagens soltas: são
-              simulações de abertura de um site, com barra de navegador, rótulo de modelo e identidade própria.
+              Aqui o objetivo é deixar claro que cada peça é um conceito. Não são páginas finais: são simulações de
+              sites-modelo, com barra de navegador, identidade própria e a mesma estrutura que um escritório real
+              receberia — cabeçalho, abertura, áreas de atuação e rodapé.
             </p>
           </div>
         </Reveal>
 
-        <ol className="mt-16 grid gap-8 lg:grid-cols-2">
+        <ol className="mt-16 grid grid-cols-[minmax(0,1fr)] gap-8 lg:grid-cols-2">
           {STUDIES.map((study) => {
             const Mock = study.render;
 
