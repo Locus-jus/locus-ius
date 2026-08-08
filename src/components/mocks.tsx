@@ -281,7 +281,7 @@ export function AndradeMock() {
 
         <div className="flex flex-1 flex-col gap-6 px-5 pt-7 sm:grid sm:grid-cols-12 sm:items-center sm:px-7 sm:pt-9">
           <div className="sm:col-span-7">
-            <p className="small-caps text-[#1d3a6c]/50">Direito empresarial · SP</p>
+            <p className="small-caps text-[#1d3a6c]/50">Direito empresarial</p>
             <h3 className="font-display mt-3 max-w-[26rem] text-[30px] leading-[0.98] tracking-[-0.02em] text-[#14181f] sm:text-[38px]">
               O novo padrão para a segurança do seu contrato.
             </h3>

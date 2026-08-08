@@ -76,7 +76,7 @@ export function FinalCta() {
 
         <Reveal delay={340}>
           <p className="mt-24 text-[10px] font-medium uppercase tracking-[0.3em] text-ivory/50">
-            São Paulo — Brasil
+            Brasil
             <span aria-hidden="true" className="mx-3 text-champagne-bright">
               ·
             </span>

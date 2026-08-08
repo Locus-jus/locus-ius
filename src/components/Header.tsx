@@ -43,13 +43,7 @@ export function Header() {
         <div className="container-site flex items-center justify-between py-2.5">
           <span className="micro-label text-[#c8c1b5]">Estúdio independente · direção de arte</span>
           <span className="micro-label hidden text-[#c8c1b5] md:block">Foco — advocacia</span>
-          <span className="micro-label text-[#c8c1b5]">
-            São Paulo
-            <span aria-hidden="true" className="mx-1.5 text-[#b8b1a6]">
-              /
-            </span>
-            Brasil
-          </span>
+          <span className="micro-label text-[#c8c1b5]">Brasil</span>
         </div>
       </div>
 
