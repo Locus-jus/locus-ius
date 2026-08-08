@@ -1,6 +1,7 @@
 import { ArrowUpRight, MoveDown } from "lucide-react";
 import { waLink } from "../config";
 import { Reveal, useParallax } from "./ui";
+import { HeroMockup } from "./mocks";
 
 const HERO_IMG = `${import.meta.env.BASE_URL}hero-arch.jpg`;
 
@@ -18,7 +19,16 @@ export function Hero() {
       id="topo"
       className="relative overflow-hidden border-b border-line-dark bg-[#0b1624]"
     >
-      <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_18%_32%,rgba(184,138,74,0.08),transparent_38%),radial-gradient(circle_at_82%_18%,rgba(255,255,255,0.03),transparent_42%),linear-gradient(135deg,#07121f_0%,#0b1624_45%,#101b2a_100%)]"></div>
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: `url(${HERO_IMG})` }}
+      ></div>
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-[linear-gradient(105deg,rgba(7,18,31,0.96)_0%,rgba(11,22,36,0.88)_40%,rgba(16,27,43,0.55)_78%,rgba(16,27,43,0.35)_100%)]"
+      ></div>
+      <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_18%_32%,rgba(184,138,74,0.08),transparent_38%),radial-gradient(circle_at_82%_18%,rgba(245,243,238,0.05),transparent_42%)]"></div>
 
 <div className="container-site relative pt-28 md:pt-32 lg:pt-36">
         <Reveal>
@@ -95,27 +105,13 @@ export function Hero() {
 
           <div className="lg:col-span-5">
             <Reveal delay={160} className="relative">
-              <div ref={mediaRef} className="media overflow-hidden border border-line-dark bg-[#101b2a] shadow-[0_24px_80px_rgb(0_0_0/0.32)] rounded-[14px]">
-                <div className="relative aspect-[4/5]">
-                  <img
-                    src={HERO_IMG}
-                    alt="Fotografia arquitetônica em tons claros de um escritório de trabalho contemporâneo"
-                    loading="eager"
-                    decoding="async"
-                    className="h-full w-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#07121f]/70 via-transparent to-transparent"></div>
-                  <div className="absolute left-5 top-5 rounded-[14px] border border-[#b88a4a]/40 bg-[#0b1624]/70 px-3 py-1 text-[9px] font-semibold uppercase tracking-[0.28em] text-[#c8c1b5]">
-                    Fig. 01 · arquitetura
-                  </div>
-                  <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-4">
-                    <p className="max-w-[15rem] text-[11px] font-medium uppercase tracking-[0.22em] text-[#efe9de]/80">
-                      Imagem limpa, moderna e sem composição instável.
-                    </p>
-                    <span className="rounded-[14px] border border-[#c79a5a]/35 bg-[#0b1624]/70 px-3 py-1 text-[9px] font-semibold uppercase tracking-[0.26em] text-[#c79a5a]">
-                      Studio view
-                    </span>
-                  </div>
+              <div ref={mediaRef} className="rounded-[18px] border border-[#c79a5a]/25 bg-[#0b1624]/60 p-3 shadow-[0_30px_70px_rgb(0_0_0/0.35)] backdrop-blur-sm">
+                <div className="overflow-hidden rounded-[12px] border border-line-dark">
+                  <HeroMockup />
+                </div>
+                <div className="mt-3 flex items-center justify-between px-1">
+                  <p className="micro-label text-[#b8b1a6]">Site-modelo · conceito</p>
+                  <span className="micro-label text-[#b88a4a]">Laptop view</span>
                 </div>
               </div>
             </Reveal>

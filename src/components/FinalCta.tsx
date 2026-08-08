@@ -5,7 +5,22 @@ import { waLink } from "../config";
 
 export function FinalCta() {
   return (
-    <section className="relative overflow-hidden border-t border-line-dark bg-brown">
+    <section className="relative overflow-hidden border-t border-line-dark bg-[#0b1624]">
+      {/* Paisagem corporativa ao fundo */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: `url(${import.meta.env.BASE_URL}hero-arch.jpg)` }}
+      ></div>
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-[linear-gradient(135deg,rgba(7,18,31,0.92)_0%,rgba(11,22,36,0.86)_45%,rgba(16,27,42,0.7)_100%)]"
+      ></div>
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(184,138,74,0.09),transparent_45%)]"
+      ></div>
+
       {/* Assinatura fantasma ao fundo */}
       <span
         aria-hidden="true"
