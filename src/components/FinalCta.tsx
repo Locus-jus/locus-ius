@@ -1,6 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import { Reveal } from "./ui";
-import { LocusMark } from "./ui";
+import { BrandLogo } from "./ui";
 import { waLink } from "../config";
 
 export function FinalCta() {
@@ -21,7 +21,7 @@ export function FinalCta() {
 
         <Reveal delay={90}>
           <div className="mx-auto mt-10 flex justify-center">
-            <LocusMark className="h-16 w-16" tone="dark" />
+            <BrandLogo tone="dark" />
           </div>
         </Reveal>
 

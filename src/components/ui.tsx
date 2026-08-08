@@ -51,7 +51,7 @@ export function BrandLogo({
       </span>
 
       <span className="inline-flex flex-col">
-        <span className={"font-display text-[22px] leading-none tracking-[-0.06em] " + text}>
+        <span className={"font-serif italic text-[22px] leading-none tracking-[-0.02em] " + text}>
           locus<span style={{ color: accent }}>,</span> <span style={{ color: tone === "dark" ? "#d7be86" : accent }}>ius</span>
         </span>
         <span className={"mt-1 text-[8.5px] font-semibold uppercase tracking-[0.34em] " + sub}>
