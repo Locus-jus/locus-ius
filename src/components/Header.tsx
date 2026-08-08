@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { site, waLink } from "../config";
-import { BrandWordmark } from "./ui";
+import { BrandLogo } from "./ui";
 
 const NAV = [
   { href: "#portfolio", label: "Projetos", n: "01" },
@@ -56,7 +56,7 @@ export function Header() {
       <div className={"flex items-center justify-between transition-all duration-500 " + (scrolled ? "h-14" : "h-16 md:h-[4.6rem]")}>
         <div className="container-site flex w-full items-center justify-between">
           <a href="#topo" className="group" aria-label={`${site.brand} — início`}>
-            <BrandWordmark className="transition-opacity duration-300 group-hover:opacity-70" />
+            <BrandLogo className="transition-opacity duration-300 group-hover:opacity-80" />
           </a>
 
           <nav className="hidden items-center gap-10 lg:flex" aria-label="Navegação principal">

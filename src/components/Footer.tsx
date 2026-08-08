@@ -1,6 +1,6 @@
 import { AtSign, ArrowUpRight, Mail } from "lucide-react";
 import { site, waLink } from "../config";
-import { BrandWordmark, WhatsAppIcon } from "./ui";
+import { BrandLogo, WhatsAppIcon } from "./ui";
 
 const NAV = [
   { href: "#portfolio", label: "Projetos" },
@@ -18,7 +18,7 @@ export function Footer() {
       <div className="container-site py-20 md:py-28">
         <div className="grid gap-14 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-5">
-            <BrandWordmark tone="dark" />
+            <BrandLogo tone="dark" />
             <p className="micro-label mt-8 text-champagne-bright">Sites para advocacia</p>
             <p className="mt-6 max-w-sm text-[15px] leading-relaxed text-ivory/65">
               Estúdio independente para escritórios de advocacia: da conversa e da direção de arte ao site
@@ -118,7 +118,7 @@ export function Footer() {
       {/* Wordmark gigante, cortada pela base do rodapé */}
       <div aria-hidden="true" className="select-none overflow-hidden px-4">
         <p className="-mb-[0.18em] whitespace-nowrap text-center font-display text-[clamp(3.4rem,13vw,11rem)] uppercase leading-none tracking-[-0.02em] text-ivory/[0.05]">
-          Sites para advocacia
+          locus, ius
         </p>
       </div>
     </footer>

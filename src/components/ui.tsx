@@ -30,6 +30,38 @@ export function BrandWordmark({
   );
 }
 
+export function BrandLogo({
+  className = "",
+  tone = "light",
+}: {
+  className?: string;
+  tone?: "light" | "dark";
+}) {
+  const text = tone === "dark" ? "text-ivory" : "text-charcoal";
+  const sub = tone === "dark" ? "text-ivory/58" : "text-taupe";
+  const accent = "#c3a86e";
+  const border = tone === "dark" ? "border-ivory/15" : "border-line";
+
+  return (
+    <span className={"inline-flex items-center gap-4 " + className}>
+      <span className={"relative grid h-12 w-12 place-items-center rounded-full border " + border}>
+        <span className={"font-display text-[26px] leading-none " + text}>LI</span>
+        <span aria-hidden="true" className="absolute inset-x-2 bottom-2 h-px bg-current opacity-20"></span>
+        <span aria-hidden="true" className="absolute bottom-1 left-1/2 h-2 w-2 -translate-x-1/2 rotate-45" style={{ background: accent }}></span>
+      </span>
+
+      <span className="inline-flex flex-col">
+        <span className={"font-display text-[22px] leading-none tracking-[-0.05em] " + text}>
+          locus<span style={{ color: accent }}>,</span> ius
+        </span>
+        <span className={"mt-1 text-[8.5px] font-semibold uppercase tracking-[0.34em] " + sub}>
+          Sites para advocacia
+        </span>
+      </span>
+    </span>
+  );
+}
+
 /* Monograma LI — versão inline (favicon / avatares / selo) */
 export function LocusMark({
   className = "h-10 w-10",
