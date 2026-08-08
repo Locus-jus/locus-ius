@@ -12,7 +12,7 @@ export function BrandWordmark({
     <span className={"inline-flex flex-col " + className}>
       <span
         className={
-          "font-display text-[20px] italic leading-none tracking-[-0.01em] md:text-[22px] " +
+          "font-display text-[20px] leading-none tracking-[-0.04em] md:text-[22px] " +
           (tone === "dark" ? "text-ivory" : "text-charcoal")
         }
       >
@@ -38,11 +38,11 @@ export function LocusMark({
   className?: string;
   tone?: "light" | "dark";
 }) {
-  const stroke = tone === "light" ? "#24221e" : "#f3f0e9";
-  const accent = "#a58b5a";
+  const stroke = tone === "light" ? "#111827" : "#f7f8fb";
+  const accent = "#2563eb";
   return (
     <svg viewBox="0 0 128 128" aria-hidden="true" className={className}>
-      <rect width="128" height="128" fill={tone === "light" ? "#f3f0e9" : "#171512"} />
+      <rect width="128" height="128" fill={tone === "light" ? "#f7f8fb" : "#0f172a"} />
       <g stroke={stroke} strokeWidth="7">
         <line x1="26" y1="28" x2="26" y2="100" />
         <line x1="26" y1="94" x2="62" y2="94" />

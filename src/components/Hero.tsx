@@ -1,31 +1,23 @@
-﻿import { ArrowUpRight, MoveDown } from "lucide-react";
+import { ArrowUpRight, MoveDown } from "lucide-react";
 import { waLink } from "../config";
 import { Reveal, useParallax } from "./ui";
-import { HeroMockup } from "./mocks";
 
 const HERO_IMG = `${import.meta.env.BASE_URL}hero-arch.jpg`;
 
-const META = [
-  { n: "01", t: "Sites institucionais", v: "Estrutura, texto e direção de arte" },
-  { n: "02", t: "Design + desenvolvimento", v: "Do esboço ao ar, por uma pessoa" },
-  { n: "03", t: "O contato", v: "WhatsApp direto, sem burocracia" },
+const STATS = [
+  { n: "01", t: "Sites institucionais", v: "Estrutura, texto e direção de arte." },
+  { n: "02", t: "Design + desenvolvimento", v: "Do esboço ao ar, por uma pessoa." },
+  { n: "03", t: "Contato direto", v: "WhatsApp sem burocracia." },
 ];
 
 export function Hero() {
-  const mediaRef = useParallax(-16);
+  const mediaRef = useParallax(-10);
 
   return (
-    <section id="topo" className="paper-grain relative overflow-hidden bg-ivory">
-      {/* Número fantasma de fundo */}
-      <span
-        aria-hidden="true"
-        className="pointer-events-none absolute -right-8 top-28 hidden select-none font-display text-[20rem] italic leading-none text-charcoal/[0.05] lg:block"
-      >
-        01
-      </span>
+    <section id="topo" className="relative overflow-hidden border-b border-line bg-ivory">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(37,99,235,0.08),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(96,165,250,0.05),transparent_24%)]"></div>
 
-      <div className="container-site pt-24 md:pt-32">
-        {/* Micro linha de topo */}
+      <div className="container-site relative pt-28 md:pt-32 lg:pt-36">
         <Reveal>
           <div className="flex items-center justify-between border-b border-line pb-3.5">
             <span className="micro-label">Estúdio independente</span>
@@ -34,46 +26,43 @@ export function Hero() {
           </div>
         </Reveal>
 
-        {/* Epígrafe — palavra de abertura */}
-        <Reveal delay={40}>
-          <p className="mt-8 font-display italic text-[clamp(1.5rem,3.4vw,3rem)] leading-tight tracking-[-0.01em] text-stone md:mt-10">
-            Locus, ius
-          </p>
-        </Reveal>
+        <div className="grid gap-14 pt-12 lg:grid-cols-12 lg:items-start lg:gap-12 lg:pt-16">
+          <div className="lg:col-span-7 lg:pr-4">
+            <Reveal delay={40}>
+              <p className="font-display text-[clamp(1.35rem,2.8vw,2.2rem)] italic leading-none tracking-[-0.03em] text-stone">
+                Locus, Ius
+              </p>
+            </Reveal>
 
-        <div className="grid grid-cols-1 gap-14 pt-10 lg:grid-cols-12 lg:gap-8 lg:pt-14">
-          {/* ————— Contracapa ————— */}
-          <div className="relative flex flex-col justify-center lg:col-span-7">
-            <Reveal>
-              <p className="eyebrow">
+            <Reveal delay={90}>
+              <p className="eyebrow mt-8">
                 <span aria-hidden="true" className="h-px w-10 bg-champagne"></span>
                 Uma presença digital
               </p>
             </Reveal>
-            <Reveal delay={90}>
-              <h1 className="font-display-xl mt-8 text-[clamp(3.1rem,8.2vw,7.6rem)] leading-[0.9] tracking-[-0.03em] text-charcoal">
-                <span className="block text-champagne">À altura</span>
-                <span className="block">do seu</span>
-                <span className="block">escritório.</span>
+
+            <Reveal delay={130}>
+              <h1 className="font-display-xl mt-6 max-w-3xl text-[clamp(3.3rem,8vw,7.8rem)] leading-[0.92] tracking-[-0.055em] text-charcoal">
+                <span className="block text-champagne">Sites modernos</span>
+                <span className="block">para escritórios</span>
+                <span className="block">de advocacia.</span>
               </h1>
             </Reveal>
-            <Reveal delay={190}>
-              <div className="mt-10 h-px w-full max-w-lg bg-gradient-to-r from-line to-transparent"></div>
-            </Reveal>
-            <Reveal delay={230}>
-              <p className="mt-7 max-w-md text-[15px] leading-relaxed text-stone md:text-base">
-                A identidade digital de um escritório de advocacia é o seu lugar — Locus, Ius é o estúdio
-                que trata esse espaço com a precisão de um escritório jurídico: arquitetura, rigor e cultivo
-                editorial.
+
+            <Reveal delay={180}>
+              <p className="mt-8 max-w-xl text-[15px] leading-relaxed text-stone md:text-base">
+                Identidade visual, conteúdo e desenvolvimento reunidos num site claro, atual e confiável.
+                Cada tela é pensada para parecer contemporânea, leve e fácil de navegar em qualquer aparelho.
               </p>
             </Reveal>
-            <Reveal delay={300}>
-              <div className="mt-10 flex flex-wrap items-center gap-x-12 gap-y-6">
+
+            <Reveal delay={230}>
+              <div className="mt-10 flex flex-wrap items-center gap-4">
                 <a
-                  href={waLink("Olá, quero criar um site para o meu escritório de advocacia.")}
+                  href={waLink("Olá, quero criar um site moderno para o meu escritório de advocacia.")}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group inline-flex items-center gap-3 bg-brown px-7 py-4 text-[11px] font-semibold uppercase tracking-[0.26em] text-ivory transition-colors duration-300 hover:bg-charcoal"
+                  className="group inline-flex items-center gap-3 rounded-full bg-brown px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.26em] text-ivory transition-colors duration-300 hover:bg-charcoal"
                 >
                   Iniciar conversa
                   <ArrowUpRight
@@ -90,81 +79,65 @@ export function Hero() {
               </div>
             </Reveal>
 
-            <Reveal delay={380}>
-              <p className="mt-16 flex items-center gap-3 micro-label text-taupe">
+            <Reveal delay={300}>
+              <p className="mt-14 flex items-center gap-3 micro-label text-taupe">
                 <MoveDown aria-hidden="true" className="h-3.5 w-3.5 animate-bounce" />
                 Scroll
               </p>
             </Reveal>
           </div>
 
-          {/* ————— Capa ————— */}
-          <div className="relative lg:col-span-5 lg:pl-6">
-            <Reveal delay={180} className="relative">
-              <div ref={mediaRef} className="media relative aspect-[4/5] w-full overflow-hidden border border-line">
-                <img
-                  src={HERO_IMG}
-                  alt="Fotografia arquitetônica em tons claros de um escritório contemporâneo"
-                  loading="eager"
-                  decoding="async"
-                  className="h-full w-full object-cover"
-                />
-                <span aria-hidden="true" className="absolute left-3 top-3 h-12 w-12 border-l border-t border-charcoal/40"></span>
-                <span aria-hidden="true" className="absolute bottom-3 right-3 h-12 w-12 border-b border-r border-charcoal/40"></span>
-                <p className="absolute left-5 top-5 text-[9px] font-semibold uppercase tracking-[0.3em] text-stone">
-                  Fig. 01 — Arquitetura
-                </p>
-                <p className="absolute bottom-5 left-5 text-[9px] font-medium uppercase tracking-[0.28em] text-stone/70">
-                  Locus, Ius · loc. est.
-                </p>
-              </div>
-
-              {/* Mockup escuro sobreposto na base da fotografia */}
-              <div className="relative z-10 mx-auto hidden w-[88%] max-w-[380px] lg:absolute lg:bottom-[-3rem] lg:left-0 lg:mx-0 lg:-mt-20 lg:block lg:w-[68%]">
-                <HeroMockup />
-                <div className="mt-3 flex items-center justify-between px-1 text-[9px] font-semibold uppercase tracking-[0.26em] text-taupe">
-                  <span>Conceito</span>
-                  <span className="text-champagne">01 — A&amp;L</span>
+          <div className="lg:col-span-5">
+            <Reveal delay={160} className="relative">
+              <div ref={mediaRef} className="media overflow-hidden rounded-[2rem] border border-line bg-cream shadow-[0_24px_70px_rgb(15_23_42/0.08)]">
+                <div className="relative aspect-[4/5]">
+                  <img
+                    src={HERO_IMG}
+                    alt="Fotografia arquitetônica em tons claros de um escritório contemporâneo"
+                    loading="eager"
+                    decoding="async"
+                    className="h-full w-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-white/10 via-transparent to-transparent"></div>
+                  <div className="absolute left-5 top-5 rounded-full border border-white/50 bg-white/75 px-3 py-1 text-[9px] font-semibold uppercase tracking-[0.28em] text-charcoal backdrop-blur-sm">
+                    Fig. 01 · arquitetura
+                  </div>
+                  <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-4">
+                    <p className="max-w-[15rem] text-[11px] font-medium uppercase tracking-[0.22em] text-charcoal/80">
+                      Imagem limpa, moderna e sem composição instável.
+                    </p>
+                    <span className="rounded-full border border-charcoal/10 bg-white/80 px-3 py-1 text-[9px] font-semibold uppercase tracking-[0.26em] text-taupe backdrop-blur-sm">
+                      Studio view
+                    </span>
+                  </div>
                 </div>
+              </div>
+            </Reveal>
+
+            <Reveal delay={220}>
+              <div className="mt-5 grid gap-3 sm:grid-cols-3">
+                {STATS.map((item) => (
+                  <div key={item.n} className="rounded-2xl border border-line bg-cream p-4 shadow-[0_16px_40px_rgb(15_23_42/0.04)]">
+                    <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-champagne">{item.n}</p>
+                    <p className="mt-2 text-[12px] font-semibold uppercase tracking-[0.2em] text-charcoal">{item.t}</p>
+                    <p className="mt-3 text-[13px] leading-relaxed text-stone">{item.v}</p>
+                  </div>
+                ))}
               </div>
             </Reveal>
           </div>
         </div>
-
-        {/* Rodapé do hero — dados da edição */}
-        <Reveal delay={160}>
-          <div className="mt-24 grid grid-cols-1 border-t border-line pb-20 sm:grid-cols-3 md:mt-28 lg:mt-16">
-            {META.map((c, i) => (
-              <div
-                key={c.n}
-                className={
-                  "border-b border-line py-6 sm:border-b-0 sm:py-8 " +
-                  (i > 0 ? "sm:border-l sm:pl-8" : "")
-                }
-              >
-                <p className="micro-label">
-                  <span aria-hidden="true" className="mr-3 font-display italic text-champagne">
-                    {c.n}
-                  </span>
-                  {c.t}
-                </p>
-                <p className="font-display-soft mt-3 text-[18px] italic leading-snug text-charcoal/75">{c.v}</p>
-              </div>
-            ))}
-          </div>
-        </Reveal>
       </div>
     </section>
   );
 }
 
-/* ============ PRINCÍPIO — monumental ============ */
 export function Concept() {
-  const stripRef = useParallax(24);
+  const stripRef = useParallax(12);
 
   return (
-    <section className="relative overflow-hidden border-t border-line bg-sand py-28 md:py-40">
-      <div className="container-site relative">
+    <section className="border-b border-line bg-sand">
+      <div className="container-site py-20 md:py-28 lg:py-32">
         <Reveal>
           <div className="flex items-center justify-between border-b border-line pb-3.5">
             <p className="eyebrow">
@@ -175,66 +148,40 @@ export function Concept() {
           </div>
         </Reveal>
 
-        <div className="relative mt-14 md:mt-20 lg:pr-[20%]">
-          <Reveal delay={90}>
-            <h2 className="font-display-xl capitalize text-[clamp(3rem,8.2vw,7.8rem)] uppercase leading-[0.94] tracking-[-0.03em] text-charcoal">
-              <span className="block">Seu site</span>
-              <span className="block">é parte da</span>
-              <span className="relative z-10 block text-champagne">imagem</span>
-              <span className="block">do seu</span>
-              <span className="block">escritório.</span>
-            </h2>
-          </Reveal>
+        <div className="mt-12 grid gap-10 lg:grid-cols-12 lg:items-center lg:gap-12">
+          <div className="lg:col-span-7 lg:pr-10">
+            <Reveal delay={80}>
+              <h2 className="font-display-xl text-[clamp(2.8rem,7vw,6.6rem)] leading-[0.95] tracking-[-0.05em] text-charcoal">
+                Seu site é parte da imagem do seu escritório.
+              </h2>
+            </Reveal>
 
-          <Reveal delay={200}>
-            <div className="mt-14 h-px w-full max-w-md bg-gradient-to-r from-line to-transparent"></div>
-            <div className="mt-7 grid max-w-2xl gap-8 md:grid-cols-2">
-              <p className="text-[14.5px] leading-relaxed text-stone">
-                Um site não substitui a reputação de um advogado — pode reforçá-la, ou enfraquecê-la.
-              </p>
-              <p className="font-display-soft text-[18px] italic leading-relaxed text-charcoal/85">
-                Antes de entrar em contato, quase sempre alguém já passou pelo seu site.
-              </p>
-            </div>
-          </Reveal>
+            <Reveal delay={140}>
+              <div className="mt-8 max-w-2xl space-y-5 border-l-2 border-champagne/50 pl-6 text-[15px] leading-relaxed text-stone md:text-base">
+                <p>Um site não substitui a reputação de um advogado. Ele reforça, organiza e traduz o que já existe.</p>
+                <p>Antes de entrar em contato, quase sempre alguém já passou pelo seu site. A experiência precisa parecer clara e atual.</p>
+              </div>
+            </Reveal>
+          </div>
 
-          {/* Fita de arquitetura — desktop, à direita da composição */}
-          <Reveal delay={140} className="absolute right-0 top-0 hidden h-full w-[230px] lg:block">
-            <div ref={stripRef} className="pointer-events-none h-full">
-              <div className="relative h-full overflow-hidden border border-line">
+          <Reveal delay={120} className="lg:col-span-5">
+            <div ref={stripRef} className="rounded-[2rem] border border-line bg-cream p-4 shadow-[0_18px_50px_rgb(15_23_42/0.06)]">
+              <div className="overflow-hidden rounded-[1.5rem] border border-line">
                 <img
-                  src={`${import.meta.env.BASE_URL}hero-arch.jpg`}
+                  src={HERO_IMG}
                   alt="Detalhe arquitetônico em tons claros"
                   loading="lazy"
                   decoding="async"
-                  className="h-full w-full object-cover brightness-[0.96]"
+                  className="h-[28rem] w-full object-cover brightness-[0.98]"
                 />
-                <span aria-hidden="true" className="absolute inset-0 bg-ivory/10"></span>
-                <span aria-hidden="true" className="absolute left-3 top-3 h-8 w-8 border-l border-t border-charcoal/30"></span>
-                <p className="absolute bottom-4 left-4 right-4 text-[9px] font-semibold uppercase leading-relaxed tracking-[0.26em] text-stone">
-                  Fig. 02 — Textura
-                </p>
+              </div>
+              <div className="mt-4 flex items-center justify-between px-1 text-[9px] font-semibold uppercase tracking-[0.28em] text-taupe">
+                <span>Textura · arquitetura</span>
+                <span className="text-champagne">01</span>
               </div>
             </div>
           </Reveal>
         </div>
-
-        {/* Fita fotográfica — mobile */}
-        <Reveal delay={140} className="mt-12 lg:hidden">
-          <div className="relative h-[40vh] overflow-hidden border border-line">
-            <img
-              src={`${import.meta.env.BASE_URL}hero-arch.jpg`}
-              alt="Detalhe arquitetônico em tons claros"
-              loading="lazy"
-              decoding="async"
-              className="h-full w-full object-cover brightness-[0.96]"
-            />
-            <span aria-hidden="true" className="absolute left-3 top-3 h-8 w-8 border-l border-t border-charcoal/30"></span>
-            <p className="absolute bottom-4 left-4 text-[9px] font-semibold uppercase tracking-[0.26em] text-stone">
-              Fig. 02 — Textura
-            </p>
-          </div>
-        </Reveal>
       </div>
     </section>
   );
