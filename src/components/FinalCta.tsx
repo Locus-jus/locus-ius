@@ -48,12 +48,12 @@ export function FinalCta() {
               href={waLink("Olá, quero conversar sobre o site do meu escritório de advocacia.")}
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-4 bg-ivory px-8 py-4 text-[12px] font-semibold uppercase tracking-[0.28em] text-brown transition-colors duration-300 hover:bg-champagne-bright"
+              className="group inline-flex h-[3.25rem] items-center gap-4 rounded-[14px] bg-[#b88a4a] px-8 text-[12px] font-semibold uppercase tracking-[0.28em] text-[#0b1624] transition-all duration-200 ease-out hover:bg-[#c79a5a]"
             >
               Conversar sobre o projeto
               <ArrowUpRight
                 aria-hidden="true"
-                className="h-4 w-4 text-champagne transition-colors duration-300 group-hover:text-brown"
+                className="h-4 w-4 text-[#0b1624] transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
               />
             </a>
           </div>

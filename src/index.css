@@ -2,42 +2,42 @@
 
 @theme {
   /* =====================================================================
-     LOCUS, IUS — Identidade visual
-     Papel claro dominante + madeira escura de contraste + champagne raro.
-     Distribuição de referência: 50% ivory · 20% sand · 15% charcoal
-                          10% brown · 5% champagne.
+     LOCUS, IUS — Identidade visual v2
+     Hero cinematográfico em azul-marinho profundo + editorial claro.
+     Acento bronze envelhecido, usado com moderação.
      ===================================================================== */
 
   /* Fundo e superfícies */
-  --color-ivory: #f7f8fb;
-  --color-sand: #eef2f7;
-  --color-cream: #ffffff;
+  --color-ivory: #f5f3ee;
+  --color-sand: #ece7de;
+  --color-cream: #fdfbf7;
 
   /* Tinta */
-  --color-charcoal: #111827;
-  --color-ink: #0b1120;
-  --color-taupe: #667085;
-  --color-stone: #475467;
+  --color-charcoal: #16202e;
+  --color-ink: #07121f;
+  --color-taupe: #6f6657;
+  --color-stone: #5b534a;
 
-  /* Contraste escuro */
-  --color-brown: #0f172a;
-  --color-wood: #111827;
-  --color-bark: #1f2937;
+  /* Contraste escuro (azul-marinho) */
+  --color-brown: #0b1624;
+  --color-wood: #101b2a;
+  --color-bark: #131e2c;
 
-  /* Acento moderno */
-  --color-champagne: #2563eb;
-  --color-champagne-bright: #60a5fa;
-  --color-champagne-dim: #93c5fd;
+  /* Acento bronze envelhecido */
+  --color-champagne: #b88a4a;
+  --color-champagne-bright: #c79a5a;
+  --color-champagne-dim: #a97639;
 
   /* Linhas — claras e escuras */
-  --color-line: rgb(17 24 39 / 0.1);
-  --color-line-soft: rgb(17 24 39 / 0.06);
-  --color-line-dark: rgb(255 255 255 / 0.16);
-  --color-line-dark-soft: rgb(255 255 255 / 0.08);
+  --color-line: rgb(22 32 46 / 0.12);
+  --color-line-soft: rgb(22 32 46 / 0.07);
+  --color-line-dark: rgb(245 243 238 / 0.16);
+  --color-line-dark-soft: rgb(245 243 238 / 0.08);
 
   /* Tipografia */
-  --font-display: "Inter Tight", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", "Georgia", serif;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Fraunces", "Georgia", serif;
 
   --breakpoint-lg: 64rem;
 }
@@ -52,8 +52,8 @@
     @apply bg-ivory font-sans text-charcoal antialiased;
     text-rendering: optimizeLegibility;
     background-image:
-      radial-gradient(circle at top left, rgb(37 99 235 / 0.06), transparent 30%),
-      radial-gradient(circle at top right, rgb(96 165 250 / 0.08), transparent 26%);
+      radial-gradient(circle at 18% 8%, rgb(184 138 74 / 0.05), transparent 32%),
+      radial-gradient(circle at 88% 4%, rgb(184 138 74 / 0.04), transparent 28%);
   }
 
   h1,
@@ -129,22 +129,22 @@
   }
 }
 
-/* ===== Display modern — Inter Tight ===== */
+/* ===== Display editorial — Fraunces ===== */
 .font-display {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.font-display-xl {
   font-family: var(--font-display);
   font-weight: 600;
   letter-spacing: -0.03em;
 }
 
-.font-display-xl {
-  font-family: var(--font-display);
-  font-weight: 700;
-  letter-spacing: -0.04em;
-}
-
 .font-display-soft {
   font-family: var(--font-display);
-  font-weight: 500;
+  font-weight: 400;
 }
 
 /* ===== Reveal — cinematográfico ===== */

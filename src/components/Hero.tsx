@@ -14,28 +14,25 @@ export function Hero() {
   const mediaRef = useParallax(-10);
 
   return (
-    <section id="topo" className="relative overflow-hidden border-b border-line bg-ivory">
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${HERO_IMG})` }}
-        aria-hidden="true"
-      ></div>
-      <div className="absolute inset-0 bg-ivory/60"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(37,99,235,0.08),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(96,165,250,0.05),transparent_24%)]"></div>
+    <section
+      id="topo"
+      className="relative overflow-hidden border-b border-line-dark bg-[#0b1624]"
+    >
+      <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_18%_32%,rgba(184,138,74,0.08),transparent_38%),radial-gradient(circle_at_82%_18%,rgba(255,255,255,0.03),transparent_42%),linear-gradient(135deg,#07121f_0%,#0b1624_45%,#101b2a_100%)]"></div>
 
-      <div className="container-site relative pt-28 md:pt-32 lg:pt-36">
+<div className="container-site relative pt-28 md:pt-32 lg:pt-36">
         <Reveal>
-          <div className="flex items-center justify-between border-b border-line pb-3.5">
-            <span className="micro-label">Estúdio independente</span>
-            <span className="micro-label hidden sm:block">Edição 001</span>
-            <span className="micro-label">Web para advocacia</span>
+          <div className="flex items-center justify-between border-b border-line-dark pb-3.5">
+            <span className="micro-label text-ivory/55">Estúdio independente</span>
+            <span className="micro-label hidden text-ivory/55 sm:block">Edição 001</span>
+            <span className="micro-label text-ivory/55">Web para advocacia</span>
           </div>
         </Reveal>
 
-        <div className="grid gap-14 pt-12 lg:grid-cols-12 lg:items-start lg:gap-12 lg:pt-16">
-          <div className="lg:col-span-7 lg:pr-4">
+        <div className="grid gap-14 pt-12 lg:grid-cols-12 lg:items-center lg:gap-16 lg:pb-8 lg:pt-16">
+          <div className="lg:col-span-7 lg:pr-6">
             <Reveal delay={40}>
-              <p className="font-display text-[clamp(1.35rem,2.8vw,2.2rem)] italic leading-none tracking-[-0.03em] text-stone">
+              <p className="font-display italic text-[clamp(1.35rem,2.8vw,2.2rem)] leading-none tracking-[-0.02em] text-[#c79a5a]">
                 Locus, Ius
               </p>
             </Reveal>
@@ -43,20 +40,22 @@ export function Hero() {
             <Reveal delay={90}>
               <p className="eyebrow mt-8">
                 <span aria-hidden="true" className="h-px w-10 bg-champagne"></span>
-                Uma presença digital
+                <span className="text-ivory/90">Uma presença digital</span>
               </p>
             </Reveal>
 
             <Reveal delay={130}>
-              <h1 className="font-display-xl mt-6 max-w-3xl text-[clamp(3.3rem,8vw,7.8rem)] leading-[0.92] tracking-[-0.055em] text-charcoal">
-                <span className="block text-champagne">Sites modernos</span>
+              <h1 className="mt-6 max-w-3xl font-display text-[clamp(3.2rem,6vw,5.8rem)] leading-[1] tracking-[-0.02em] text-[#f5f3ee]">
+                <span className="block">Sites modernos</span>
                 <span className="block">para escritórios</span>
-                <span className="block">de advocacia.</span>
+                <span className="block">
+                  de <em className="font-display text-[#b88a4a]">advocacia</em>.
+                </span>
               </h1>
             </Reveal>
 
             <Reveal delay={180}>
-              <p className="mt-8 max-w-xl text-[15px] leading-relaxed text-stone md:text-base">
+              <p className="mt-8 max-w-[34rem] text-[1.05rem] leading-[1.7] text-[#c8c1b5] md:text-[1.15rem]">
                 Identidade visual, conteúdo e desenvolvimento reunidos num site claro, atual e confiável.
                 Cada tela é pensada para parecer contemporânea, leve e fácil de navegar em qualquer aparelho.
               </p>
@@ -68,17 +67,18 @@ export function Hero() {
                   href={waLink("Olá, quero criar um site moderno para o meu escritório de advocacia.")}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group inline-flex items-center gap-3 rounded-full bg-brown px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.26em] text-ivory transition-colors duration-300 hover:bg-charcoal"
+                  className="group inline-flex h-[3.25rem] items-center gap-3 rounded-[14px] px-7 text-[11px] font-semibold uppercase tracking-[0.26em] text-[#0b1624] transition-colors duration-200 ease-out hover:bg-[#c79a5a]"
+                  style={{ background: "#b88a4a" }}
                 >
                   Iniciar conversa
                   <ArrowUpRight
                     aria-hidden="true"
-                    className="h-4 w-4 text-champagne-bright transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                    className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                   />
                 </a>
                 <a
                   href="#portfolio"
-                  className="link-underline text-[11px] font-semibold uppercase tracking-[0.26em] text-taupe transition-colors duration-300 hover:text-charcoal"
+                  className="link-underline text-[11px] font-semibold uppercase tracking-[0.26em] text-ivory transition-colors duration-300 hover:text-[#c79a5a]"
                 >
                   Ver projetos
                 </a>
@@ -86,7 +86,7 @@ export function Hero() {
             </Reveal>
 
             <Reveal delay={300}>
-              <p className="mt-14 flex items-center gap-3 micro-label text-taupe">
+              <p className="mt-14 flex items-center gap-3 micro-label text-ivory/45">
                 <MoveDown aria-hidden="true" className="h-3.5 w-3.5 animate-bounce" />
                 Scroll
               </p>
@@ -95,24 +95,24 @@ export function Hero() {
 
           <div className="lg:col-span-5">
             <Reveal delay={160} className="relative">
-              <div ref={mediaRef} className="media overflow-hidden rounded-[2rem] border border-line bg-cream shadow-[0_24px_70px_rgb(15_23_42/0.08)]">
+              <div ref={mediaRef} className="media overflow-hidden border border-line-dark bg-[#101b2a] shadow-[0_24px_80px_rgb(0_0_0/0.32)] rounded-[14px]">
                 <div className="relative aspect-[4/5]">
                   <img
                     src={HERO_IMG}
-                    alt="Fotografia arquitetônica em tons claros de um escritório contemporâneo"
+                    alt="Fotografia arquitetônica em tons claros de um escritório de trabalho contemporâneo"
                     loading="eager"
                     decoding="async"
                     className="h-full w-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-white/10 via-transparent to-transparent"></div>
-                  <div className="absolute left-5 top-5 rounded-full border border-white/50 bg-white/75 px-3 py-1 text-[9px] font-semibold uppercase tracking-[0.28em] text-charcoal backdrop-blur-sm">
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#07121f]/70 via-transparent to-transparent"></div>
+                  <div className="absolute left-5 top-5 rounded-[14px] border border-[#b88a4a]/40 bg-[#0b1624]/70 px-3 py-1 text-[9px] font-semibold uppercase tracking-[0.28em] text-[#c8c1b5]">
                     Fig. 01 · arquitetura
                   </div>
                   <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-4">
-                    <p className="max-w-[15rem] text-[11px] font-medium uppercase tracking-[0.22em] text-charcoal/80">
+                    <p className="max-w-[15rem] text-[11px] font-medium uppercase tracking-[0.22em] text-[#efe9de]/80">
                       Imagem limpa, moderna e sem composição instável.
                     </p>
-                    <span className="rounded-full border border-charcoal/10 bg-white/80 px-3 py-1 text-[9px] font-semibold uppercase tracking-[0.26em] text-taupe backdrop-blur-sm">
+                    <span className="rounded-[14px] border border-[#c79a5a]/35 bg-[#0b1624]/70 px-3 py-1 text-[9px] font-semibold uppercase tracking-[0.26em] text-[#c79a5a]">
                       Studio view
                     </span>
                   </div>
@@ -123,10 +123,10 @@ export function Hero() {
             <Reveal delay={220}>
               <div className="mt-5 grid gap-3 sm:grid-cols-3">
                 {STATS.map((item) => (
-                  <div key={item.n} className="rounded-2xl border border-line bg-cream p-4 shadow-[0_16px_40px_rgb(15_23_42/0.04)]">
-                    <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-champagne">{item.n}</p>
-                    <p className="mt-2 text-[12px] font-semibold uppercase tracking-[0.2em] text-charcoal">{item.t}</p>
-                    <p className="mt-3 text-[13px] leading-relaxed text-stone">{item.v}</p>
+                  <div key={item.n} className="rounded-[14px] border border-line-dark bg-[#131e2c]/70 p-4">
+                    <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#b88a4a]">{item.n}</p>
+                    <p className="mt-2 text-[12px] font-semibold uppercase tracking-[0.2em] text-[#f5f3ee]">{item.t}</p>
+                    <p className="mt-3 text-[13px] leading-relaxed text-[#b8b1a6]">{item.v}</p>
                   </div>
                 ))}
               </div>
@@ -171,8 +171,8 @@ export function Concept() {
           </div>
 
           <Reveal delay={120} className="lg:col-span-5">
-            <div ref={stripRef} className="rounded-[2rem] border border-line bg-cream p-4 shadow-[0_18px_50px_rgb(15_23_42/0.06)]">
-              <div className="overflow-hidden rounded-[1.5rem] border border-line">
+            <div ref={stripRef} className="rounded-[14px] border border-line bg-cream p-4 shadow-[0_18px_50px_rgb(16_27_42/0.06)]">
+              <div className="overflow-hidden rounded-[10px] border border-line">
                 <img
                   src={HERO_IMG}
                   alt="Detalhe arquitetônico em tons claros"

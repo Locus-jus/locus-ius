@@ -29,23 +29,23 @@ export function Header() {
       className={
         "fixed inset-x-0 top-0 z-50 transition-[background-color,box-shadow] duration-500 " +
         (scrolled || open
-          ? "border-b border-line bg-ivory/92 shadow-[0_1px_0_0_rgb(36_34_30/0.04)] backdrop-blur-md"
+          ? "border-b border-line-dark bg-[#0b1624]/92 shadow-[0_1px_0_0_rgb(11_22_36/0.5)] backdrop-blur-md"
           : "border-b border-transparent bg-transparent")
       }
     >
       {/* Faixa de topo — microtipografia */}
       <div
         className={
-          "hidden overflow-hidden border-b border-line transition-all duration-500 " +
+          "hidden overflow-hidden border-b border-line-dark transition-all duration-500 " +
           (scrolled ? "max-h-0" : "max-h-8")
         }
       >
         <div className="container-site flex items-center justify-between py-2.5">
-          <span className="micro-label">Estúdio independente · direção de arte</span>
-          <span className="micro-label hidden md:block">Foco — advocacia</span>
-          <span className="micro-label">
+          <span className="micro-label text-[#c8c1b5]">Estúdio independente · direção de arte</span>
+          <span className="micro-label hidden text-[#c8c1b5] md:block">Foco — advocacia</span>
+          <span className="micro-label text-[#c8c1b5]">
             São Paulo
-            <span aria-hidden="true" className="mx-1.5 text-stone">
+            <span aria-hidden="true" className="mx-1.5 text-[#b8b1a6]">
               /
             </span>
             Brasil
@@ -56,7 +56,10 @@ export function Header() {
       <div className={"flex items-center justify-between transition-all duration-500 " + (scrolled ? "h-14" : "h-16 md:h-[4.6rem]")}>
         <div className="container-site flex w-full items-center justify-between">
           <a href="#topo" className="group" aria-label={`${site.brand} — início`}>
-            <BrandLogo className="transition-opacity duration-300 group-hover:opacity-80" />
+            <div className="flex flex-col gap-1.5 transition-opacity duration-300 group-hover:opacity-80">
+              <BrandLogo tone="dark" />
+              <span aria-hidden="true" className="block h-px w-16 bg-[#b88a4a]/60"></span>
+            </div>
           </a>
 
           <nav className="hidden items-center gap-10 lg:flex" aria-label="Navegação principal">
@@ -64,7 +67,7 @@ export function Header() {
               <a
                 key={item.href}
                 href={item.href}
-                className="link-underline text-[10px] font-semibold uppercase tracking-[0.24em] text-taupe transition-colors duration-300 hover:text-charcoal"
+                className="link-underline text-[10px] font-semibold uppercase tracking-[0.24em] text-[#c8c1b5] transition-colors duration-300 hover:text-[#f5f3ee]"
               >
                 {item.label}
               </a>
@@ -76,17 +79,17 @@ export function Header() {
               href={waLink(waCta)}
               target="_blank"
               rel="noopener noreferrer"
-              className="group hidden items-center gap-2 border-b border-charcoal/60 pb-1 text-[10px] font-semibold uppercase tracking-[0.26em] text-charcoal transition-colors duration-300 hover:border-champagne hover:text-champagne lg:inline-flex"
+              className="group hidden items-center gap-2 border-b border-[#c79a5a]/60 pb-1 text-[10px] font-semibold uppercase tracking-[0.26em] text-[#f5f3ee] transition-colors duration-300 hover:border-[#c79a5a] hover:text-[#c79a5a] lg:inline-flex"
             >
               Iniciar conversa
               <ArrowUpRight
                 aria-hidden="true"
-                className="h-3.5 w-3.5 text-champagne transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                className="h-3.5 w-3.5 text-[#b88a4a] transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
               />
             </a>
             <button
               type="button"
-              className="inline-flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.26em] text-charcoal lg:hidden"
+              className="inline-flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.26em] text-[#f5f3ee] lg:hidden"
               aria-expanded={open}
               aria-controls="menu-principal"
               aria-label={open ? "Fechar menu" : "Abrir menu"}
@@ -106,9 +109,9 @@ export function Header() {
           (open ? "grid" : "grid grid-rows-[0fr]")
         }
       >
-        <div className="overflow-hidden border-t border-line">
-          <nav className="bg-ivory px-6 py-7" aria-label="Navegação principal móvel">
-            <ul className="divide-y divide-line">
+        <div className="overflow-hidden border-t border-line-dark">
+          <nav className="bg-[#0b1624] px-6 py-7" aria-label="Navegação principal móvel">
+            <ul className="divide-y divide-line-dark">
               {NAV.map((item) => (
                 <li key={item.href}>
                   <a
@@ -116,10 +119,10 @@ export function Header() {
                     onClick={() => setOpen(false)}
                     className="flex items-baseline gap-5 py-5"
                   >
-                    <span aria-hidden="true" className="font-display text-sm italic text-champagne">
+                    <span aria-hidden="true" className="font-display text-sm italic text-[#b88a4a]">
                       {item.n}
                     </span>
-                    <span className="font-display text-[26px] leading-none tracking-tight text-charcoal">
+                    <span className="font-display text-[26px] leading-none tracking-tight text-[#f5f3ee]">
                       {item.label}
                     </span>
                   </a>
@@ -131,10 +134,10 @@ export function Header() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setOpen(false)}
-              className="mt-8 inline-flex items-center gap-2 border-b border-charcoal/50 pb-1 text-[11px] font-semibold uppercase tracking-[0.26em] text-charcoal"
+              className="mt-8 inline-flex items-center gap-2 border-b border-[#c79a5a]/60 pb-1 text-[11px] font-semibold uppercase tracking-[0.26em] text-[#f5f3ee]"
             >
               Iniciar conversa
-              <ArrowUpRight aria-hidden="true" className="h-4 w-4 text-champagne" />
+              <ArrowUpRight aria-hidden="true" className="h-4 w-4 text-[#b88a4a]" />
             </a>
           </nav>
         </div>

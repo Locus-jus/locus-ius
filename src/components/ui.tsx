@@ -74,7 +74,7 @@ export function LocusMark({
   tone?: "light" | "dark";
 }) {
   const stroke = tone === "light" ? "#111827" : "#f7f8fb";
-  const accent = "#2563eb";
+  const accent = "#b88a4a";
   return (
     <svg viewBox="0 0 128 128" aria-hidden="true" className={className}>
       <rect width="128" height="128" fill={tone === "light" ? "#f7f8fb" : "#0f172a"} />
